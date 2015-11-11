@@ -1,0 +1,7 @@
+Ei kahta index.html-tiedostoa.
+
+Ei erottele isoja ja pieniä kirjaimia.
+
+Joku mystinen "index"- tiedosto on paskaa.
+
+Chromessa on emacs.

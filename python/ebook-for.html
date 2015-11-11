@@ -1,0 +1,61 @@
+<pre>
+#! /usr/bin/python
+
+# Ebook-filter by Timo Noko.
+# All LineFeed characters are removed except those between paragraphs.
+# Also excess horizontal whitespace removed.
+# Paragraph indicators: LF+LF, LF+SP and Too Short Line.
+# usage: python ThisPage.py < shitty.txt > ebook.txt
+
+import sys
+
+Paragraph_Already=False
+
+def New_Paragraph():
+    global Paragraph_Already
+    if Paragraph_Already:
+	pass
+    else:
+	sys.stdout.write('\n  ') # New paragraph has LF and 2 Spaces
+	Paragraph_Already=True
+
+LineLength=0 # of source text
+MaxLineLength=0 # of source text
+
+c=' '
+
+while True:
+    prev_c=c
+    c=sys.stdin.read(1)
+    if not c:
+        break
+    if c=='\x09': # TAB replaced with SP
+        c=' '
+    if c=='\r': # CR removed totally
+        c=prev_c
+    elif c=='\x0C': # FF removed
+        c=prev_c
+    elif c=='\n':
+        if prev_c=='\n': # 2 LFs (in Gutenberg)
+	    New_Paragraph()
+	elif ((MaxLineLength*10)/LineLength)>12: # Too short line (-20%)
+	    New_Paragraph() 
+        else:
+            sys.stdout.write(' ') 
+	LineLength=0
+    elif c==' ':
+        if prev_c=='\n': # Sometimes paragraph starts with LF+SP
+	    New_Paragraph()
+        elif prev_c==' ':
+	    pass  # one SP is enuff
+        else:
+            sys.stdout.write(' ')
+	LineLength=LineLength+1
+    else:
+        sys.stdout.write(c)
+	LineLength=LineLength+1
+	if LineLength>MaxLineLength:
+	    MaxLineLength=LineLength
+        Paragraph_Already=False
+
+</pre>

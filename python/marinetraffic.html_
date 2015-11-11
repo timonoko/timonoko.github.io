@@ -1,0 +1,41 @@
+
+<title> Marinetraffic for Symbian Phone</title>
+<h1> Marinetraffic for Symbian Phone</h1>
+<body bgcolor="#5bd4b9" text="#000000" link="#990000"
+vlink="#990000" alink="#990000">
+
+<p>
+<script type="text/javascript">
+        width=800; 
+        height=400;  
+        border=0;    
+        notation=false;
+        shownames=false;
+        zoom=10;           
+        maptype=0;         
+        trackvessel=0;     
+        fleet='';          
+        remember=false;
+        latitude=60.15; 
+        longitude=24.95; 
+</script>
+<script type="text/javascript" src="http://www.marinetraffic.com/ais/embed.js"></script>
+        
+<p>                                                                                                              
+Mobile  <a href=http://www.marinetraffic.com/ais/m>www.marinetraffic.com
+</a> is really difficult to use.                                               
+
+<S>                                                             
+<p>
+If you have S60-phone with GPS, this noko-made 
+
+<a href="mt_v1_0_0.sis">Application</a> jumps directly to correct location.
+<p>
+  Addendum: Because zooming seems to be quite difficult, I made 3 pre-zoomed versions: <a href="mt11_v1_0_0.sis">Zoom=11</a>, <a href="mt12_v1_0_0.sis">Zoom=12</a>, <a href="mt13_v1_0_0.sis">Zoom=13</a>.
+<p>
+Hint:  If the map is too tiny, ie half-screen, press refresh-button.
+<p> Runs with <a href="http://www.symbian-freeware.com/download-python-s60.html">Python</a>.
+Source code <a href=mt.py>here</a>.
+<p> </S>
+OK. Those do not work anymore. Made new ones: <a href="newais10_v1_0_0.sis">Zoom=10</a>, <a href="newais12_v1_0_0.sis">Zoom=12</a>.. If those do not work, you can run this <a href="newais12.py">script</a> in <a href="http://www.symbian-freeware.com/download-python-s60.html">Python-shell</a>.
+</html>

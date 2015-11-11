@@ -1,0 +1,38 @@
+<html>
+Lis&auml;sin Aulostiin samat n&auml;ppyl&auml;t kuin Googlemapsiss&auml;. 1=zoomout,3=zoomin,0=omapaikka.
+Tapahtuu n&auml;pp&auml;r&auml;sti itse puhelimessa lis&auml;&auml;m&auml;ll&auml; oheiset Noko-merkityt rivit tiedostoon
+C:/data/python/mapview.py .
+<p>
+
+<pre>
+    def _keyboardEvent(self, event):
+        keyCode = event['keycode']
+        if keyCode == key_codes.EKeyUpArrow:
+            self._mapEngine.moveMap(0,-KeyboardAmountOfMapMovement)
+        elif keyCode == key_codes.EKeyDownArrow:
+            self._mapEngine.moveMap(0,KeyboardAmountOfMapMovement)
+        elif keyCode == key_codes.EKeyLeftArrow:
+            self._mapEngine.moveMap(-KeyboardAmountOfMapMovement,0)
+        elif keyCode == key_codes.EKeyRightArrow:
+            self._mapEngine.moveMap(KeyboardAmountOfMapMovement,0)
+        elif keyCode == key_codes.EKey3: #Noko
+            self._mapEngine.zoomIn()     #Noko
+        elif keyCode == key_codes.EKey1: #Noko
+            self._mapEngine.zoomOut()    #Noko
+        elif keyCode == key_codes.EKey0: #Noko
+            self._mapEngine.gps.start()  #Noko
+</pre>
+<p>
+Koska Google-kartoille on jo parempi ohjelma, kannattaa Google-karttojen sijasta k&auml;ytt&auml;&auml; Openstreet- ja OpenCycle- karttoja. Edellisess&auml; on kapakat merkitty hyvin ja toisessa taas py&auml;r&auml;tiet.
+<p>
+T&auml;m&auml; tapahtuu korvaamalla c:/data/python/google_provider -tiedostossa rivi
+<pre>
+ self.url = 'http://mt.google.com/vt/v=w2.97&hl=en&x=%d&y=%d&z=%d' % (col, row, zoom)
+</pre>
+Jommallakummalla n&auml;ist&auml;:
+<pre>
+ self.url = 'http://tile.openstreetmap.org/%d/%d/%d.png' % (zoom, col, row)
+ self.url = 'http://tile.opencyclemap.org/cycle/%d/%d/%d.png' % (zoom, col, row)
+</pre>
+Tokihan niille voi my&ouml;s teh&auml; omat xxx_provider-tiedostonsa.
+</html>

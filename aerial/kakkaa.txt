@@ -1,0 +1,1339 @@
+
+
+
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Generator" content="gThumb Image Viewer">
+  <head>
+    
+      <title>Helsinki Kite Aerial Photography</title>
+
+
+
+    
+
+<p>
+    <style>
+      a:link {
+        font-weight: bold;
+        text-decoration: none;
+        color: white
+      }
+      a:visited {
+        font-weight: bold;
+        text-decoration: none;
+        color: white
+      }
+      a:hover {
+        font-weight: bold;
+        text-decoration: none;
+        color: white
+      }
+      span.title { 
+        color: white; 
+        font-weight: bold;
+        font-size: x-large;
+        text-transform: uppercase; 
+      }
+      span.copyright {
+        color: white;
+        font-weight: bold;
+        font-size: x-small;
+        text-align: center;
+      }
+      img.thumbnail {
+        border-width: 0px;
+      }
+    </style>
+  </head>
+  <body background="background.png">
+    <table width="100%" height="100%" colspacing="0" colpadding="0">
+    <tr><td>
+
+    <!-- Navigation Bar -->
+    <p align="center">
+          <span class=title>Helsinki Kite Aerial Photography</span>     
+    </p>
+
+<h2>
+<p><p><p>
+    <p align="right">
+Most recent here <a href="http://www.flickr.com/photos/timonoko/sets/137298/">===> </a>
+    <p align="right">
+Kite info here <a href="http://www.flickr.com/groups/kapkites/">===> </a>
+</h2>
+    <p align="right">
+          
+              <img align="middle" src="transparent.png" width=18 height=20 border=0></a>
+          
+
+          &nbsp;
+
+	  
+              <img align="middle" src="transparent.png" width=18 height=20 border=0></a>
+          
+    </p>
+
+    <tr><td height="100%">
+
+    <!-- Table -->
+    <table align=center border=0 cellpadding=5 width="95%">
+        <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img016.jpeg.html">
+        <img src="img016.jpeg.small.jpeg" alt="" width="185" height="120" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img003.jpeg.html">
+        <img src="img003.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img002.jpeg.html">
+        <img src="img002.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img021.jpeg.html">
+        <img src="img021.jpeg.small.jpeg" alt="" width="155" height="146" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img020.jpeg.html">
+        <img src="img020.jpeg.small.jpeg" alt="" width="185" height="136" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img013.jpeg.html">
+        <img src="img013.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img012.jpeg.html">
+        <img src="img012.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img011.jpeg.html">
+        <img src="img011.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img009.jpeg.html">
+        <img src="img009.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img008.jpeg.html">
+        <img src="img008.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img007.jpeg.html">
+        <img src="img007.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img005.jpeg.html">
+        <img src="img005.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img010.jpeg.html">
+        <img src="img010.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img019.jpeg.html">
+        <img src="img019.jpeg.small.jpeg" alt="" width="185" height="122" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img018.jpeg.html">
+        <img src="img018.jpeg.small.jpeg" alt="" width="185" height="130" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img027.jpeg.html">
+        <img src="img027.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img028.jpeg.html">
+        <img src="img028.jpeg.small.jpeg" alt="" width="185" height="136" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img029.jpeg.html">
+        <img src="img029.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img026.jpeg.html">
+        <img src="img026.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img025.jpeg.html">
+        <img src="img025.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img030.jpeg.html">
+        <img src="img030.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img001.jpeg.html">
+        <img src="img001.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img000.jpeg.html">
+        <img src="img000.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img015.jpeg.html">
+        <img src="img015.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img023.jpeg.html">
+        <img src="img023.jpeg.small.jpeg" alt="" width="170" height="146" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img022.jpeg.html">
+        <img src="img022.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img004.jpeg.html">
+        <img src="img004.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img014.jpeg.html">
+        <img src="img014.jpeg.small.jpeg" alt="" width="159" height="146" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img017.jpeg.html">
+        <img src="img017.jpeg.small.jpeg" alt="" width="185" height="128" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img024.jpeg.html">
+        <img src="img024.jpeg.small.jpeg" alt="" width="185" height="145" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td>
+<table width=209 height=170 border=0 cellspacing=0 cellpadding=0 align="center">
+  <tr>
+    <td width=209 height=10 valign="bottom" colspan=3>
+      <img src="top.png" width=209 height=10 border=0></td>
+  </tr>
+  <tr>
+    <td width=8 height=146 align="left">
+      <img src="left.png" width=8 height=146 border=0></td>
+    <td width=185 height=146 align="center" valign="middle" bgcolor="white">
+      <a href="img006.jpeg.html">
+        <img src="img006.jpeg.small.jpeg" alt="" width="185" height="139" class="thumbnail"></a></td>
+    <td width=16 height=146 align="right">
+      <img src="right.png" width=16 height=146 border=0></td>
+  </tr>
+  <tr>
+    <td width=209 height=14 valign="top" colspan=3>
+      <img src="bottom.png" width=209 height=14 border=0></td>
+  </tr>
+</table>
+<div style="text-align: center">
+  
+  <font color="#969696" size=-1>
+    
+    
+      <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </font>
+</div>
+    </td>
+    <td width=185 height=146>
+    &nbsp;
+    </td>
+  </tr>
+
+    </table>
+
+    <tr><td valign="bottom">
+
+    <center>
+      <!-- <img src="white-dot.png" width="100%" height=2> -->
+      <span class=copyright>
+         
+      </span>
+    </center>
+
+    </table>
+
+  </body>
+<center>
+<h2>
+AND <a href="http://www.flickr.com/photos/timonoko/sets/137298/"> MORE...</a>
+</h2>
+<p>
+
+<h3>
+(c) <a href="http://koti.welho.com/tnoko">Timo Noko</a>
+</h3>
+<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/bsxfHr8D76E"></param><embed src="http://www.youtube.com/v/bsxfHr8D76E" type="application/x-shockwave-flash" width="425" height="350"></embed></object>
+<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/Sd6lj_GRUeU"></param><embed src="http://www.youtube.com/v/Sd6lj_GRUeU" type="application/x-shockwave-flash" width="425" height="350"></embed></object>
+
+
+</center>
+
+</html>

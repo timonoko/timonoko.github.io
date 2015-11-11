@@ -1,0 +1,685 @@
+
+
+
+
+    FUNCTIONAL LANGUAGES FOR 
+    DATA PROCESSING NETWORKS
+
+    Timo Noko
+    Kauko Rahko
+
+    Helsinki University of Technology
+    Telecommunication Laboratory
+    Report 5/81
+
+    A paper proposed to the Fifteenth
+    Hawaii International Conference
+    on System Sciences
+
+    Otaniemi 17.6.1981
+    ISBN 951-752-233-6
+    ISSN 0355-7057
+
+
+
+ABSTRACT
+
+New constructs for a language aimed for integrated operation of the
+data processing network are proposed. Main features of the language
+are asynchronous communication, via parametor passing, and a
+possibility of retry. The number of syntactical items is reduced by
+introducing a generalized function, capable of independent existence
+and communicating via asynchronous communication paths. Available
+routes are restricted by the definition of the network topology,
+
+I INTRODUCTION
+
+Confronted with an unknown entity, analysts try to describe it as a
+*structure* of *functions* having certain *qualities*...
+
+The *structural* method is to define the inner structure with certain
+resolution, hence it is completely understood and can be utilized.
+
+According to the *functional* method the mapping of the causal
+(input-output) relationship allows utilization of the system with
+certain reliability.
+
+The *qualitative* description is the most difficult; one must acquire
+general standards of the relevant qualities.
+
+In the real world few systems deserve a structural analysis, thus the
+functionalism is a natural "human" way of looking at things.  Systems
+which are made by humans for human use are once viewed as a
+structure, and thereafter mostly valued according to the functional
+point of view. The relevant qualities of such systems Are e,q. the
+reliability, availability and ease of utilization. Hirvensalo et al
+(4) have, for instance, classified the relevant qualities of the
+software systems.
+
+A distributed computer system consists of a number of independent
+processes communicating with each other. Usually the communication is
+established via dedicated equipment which is formed to a
+communication network. However, the communication is not a function
+of such a system, rather it is qualified as an infrastructure of the
+mechanism that raise the availability of certain functions. From the
+functional point of view a network is a collection of
+_distributed_functions_.
+
+By denying the concept of communication we suggest that separate
+communication statements, such as SEND/RECEIVE can be substituted
+with other trustworthy and dead-lock-free constructs.  Certain
+nondeterministic language structures are one way to adapt the
+mechanism of communication. Asynchronism or time-independence is a
+way to raise the usability of the system components in the
+distributed environment, bottlenecked by the communication. The
+"asynchronism" is a concept of e.g. Hemdal (3): messages are
+transmitted, and thereafter they are not burdeninlg the transmitter;
+they are "on transit" until received.
+
+From utilitarian, also esthetic, point of view we suggest that a high
+level language for the distributed system should not support any
+other form of "communication" than functional, or procedural or
+process, activation. A "message" itself is related to certain
+actions, as a parameter, and it should be handled only by such an
+action. Parameter passing via a collection of available procedures,
+e.g. such as Hansen's (1) "Monitors", is one way to implement such a
+mechanism, and the rendezvous-mechanism found in e.g. ADA (5) another.
+
+
+II. EXECUTION OPTIONS fOR A FUNCTION
+
+Cook (2) describes four options for a function in a concurrent
+system:
+
+1 caller waits for completion - no reply
+2 caller waits for completion - reply
+3 execute in parallel with a caller - no reply
+4 execute in parallel with a caller - reply
+
+1 and 2 are examples of functions in a traditional sequential
+program. 3 continues on its own, once activated, and resembles a
+process activation. 4 exists on its own and must later on wait until
+somebody is interested of the results. Thus our function must have
+the capability of independent existence, and therefore we do not have
+any use for the concept "process". The concept "procedure" we reject
+as s redudant synonym for a _generalized_function_.
+
+Note that, in the case of 3 and 4, once the eventual availability
+of the function is ensured, there is no need for a further
+burdening of the caller, and therefore these activations can be
+thoroughly asynchronous. Unreliability is a natural quality of
+the calls of the type 3, and under certain circumstances they are
+to be treated as such.
+
+As a conclusion, we try to describe an integrated language for a
+distributed network with a function of all the four options.
+Moreover, such a language should be able to:
+
+- Establish asynchronous communication paths between parallel
+functions.
+
+- Mutual exclusion (when necessary) between adjacent paths.
+
+- Conform to the relative unaccessibility and nonconsistency
+between distributed subsystems.
+
+An all-purpose syntax should be available for the communication or
+function declaration and application indicating precisely what is to
+be trsnsmitted and/or received. To make the run-time svstem
+reconfigurable, we introduce a special declaration and
+indentification for concepts aimed for the system level.
+
+
+III FUZZY STATEMENTS AND COMMUNICATION PATHS
+
+In a standard block-structured, process-oriented programming language
+there seems to be no need to describe a doubtful operation; i.e. an
+operation which may at one time be executable and at other time not.
+The point is that a dynamically adaptable system deals with
+uncertainties, and a distributed programming system contains either
+mutually exclusive test-and-reserve mechanisms or a logical method of
+discarding a command, which is currently illogical. We introduce two
+new programming concepts: a concept of "trying" and a concept of
+being "puzzled".
+
+
+A program can "try" to execute several statements:
+
+try STATEMENT
+elsetry STATEMENT2
+elsetry STATEMENT3
+end try
+
+In other words, the program expcutes first executable statement in
+the try -area or none of them. The try-commnand stores the current
+consistent status of the machine and after a failure a new try
+is made after restoring the status.
+
+Statements can also he tested, until one of the statements is
+executable or a condition is fulfilled:
+
+try STATEMENT1
+elsetry STATEEMENT2
+elsetry STATEMENT3
+until CONDITION
+end try
+
+Note that this "try-until" is essentially a function of waiting in a
+state of non-execution until the program is executahle.
+
+
+When a program is "puzzled" it will accept an external decision-
+making of its future path:
+
+try path ONE: STATEMENT1 end path
+elsetry path TWO: STATEMENT2 end path
+end try
+
+From outside these are available mutually exclusive communication
+paths, and they posseas all the qualities of a normal function
+call. A call to a communication path identified with ONE, from
+elsewhere, will lead execution to STATEMENT1 with possible
+parameters coming from that caller and, at suitable moment, a
+reply returned to that caller. Note that such a call must already
+be waiting, or else, if we want to wait for an incoming call, we
+have to use the "try-until" construction. This construction is a
+generalization of e.g. the "accept"-area, found in ADA (5).
+
+
+IV. FUNCTION OR PATH CALL
+
+Data manipulation, or procedure call, such as
+
+MANIPULATE(INPUT_VALUE, VARIABLE_TO_BE_MANIPULATED)
+
+has drawbacks; there seems to be no natural way to indicate if the
+value of the VAHIABLE TO BE MANIPULATED is necessary at the procedure
+input or not. Data manipulation is a relic from common memory schemes
+where variables can be referenced by an absolute memory address. We
+suggest a "simultaneous assignment"- statement for a function which
+is returning more than one value:
+
+(A,B,C) from F(B,C)
+
+This is simply a simultaneous assignment of all the three values
+returned from the function F.
+
+The simultaneous assignment applies nicely as a douptful
+operation:
+
+try (A,B) from FUNC(B,C) elsetry A:=O; B:=O end try
+
+The result (A,B) of this statement is either results of the
+function FUNC (if available), or zeros.
+
+V. FUNCTION DECLARATION AND PARALLELLISM
+
+A function declaration is usually of this kind:
+
+USERDECLARATION waits
+(RESULTS) from FUNCTIONTYPE function FUNCTIONNAMlE(INPUT);
+-- and the rest of the function....
+
+It is similar to a communication path declartion:
+
+USERDECLARATION waits
+(RESULTS) from path PATHNAME(INPUT);
+
+Actual paths are availahle when they are declared in an existing
+function; they are leading to different actions at different
+times in the function body.
+
+The USERDECLARATION defines users of 11 function or a path. A
+named user must he visible to the function. There are four kinds
+of availabity declaration:
+
+(1) Available to a group of naimed users:
+
+USER1, USER2, USER3 waits....
+
+(2) Available to that one who activated the function:
+
+master waits....
+
+(3) Available to local users within the function:
+
+native waits....
+
+(4) When the user is not visible to the fanction, the user
+is "alien" and can he declared as:
+
+alien USERDECLARATION waits....
+
+In this case the USERDECLARATlON is optional. Anti it will be tested
+at run time.
+
+When a function, or path, has no results, an optional form of the
+function declaration is:
+
+USERDECLARATlON starts by PRIORITY...
+
+and the execution of the function continues parallel immediately
+when the activation arrive. In this declaration an optional
+value (by PRIORITY) is declaring the priority or realtime
+requirenments of the independent function. These activations can
+he completely asynchronous: a caller is not aware when, or if,
+the call was successful.
+
+When a caller is waiting for the completion of a function, or path,
+the execution of a statement:
+
+continue by PRIORITY
+
+returns the reply to the caller, and the function continues
+parallel (with an optional priority) until complete.
+
+A path cannot have any independence; consequently, after a
+"continue"-statement or when "started", it continues as a part of
+the function body in which it resides.
+
+The FUNCTIONTYPE can be either "elementary" or "common" or "indexed".
+An elementary function cannot have multiple existences; other users
+must wait until the function is completed. A common function, on the
+contrary, can be activated any number of times simultaneously, An
+indexed function must have an index-expression as a part of the
+function name i.e.:
+
+indexed function FUNCTIONNAME#INDEX(INPU'T);
+
+The number sign (#) is used to separate the index-expression from the
+actual name. An indexed function can have multiple existences with
+different indexes. The index is available in the functionbody as an
+integer.
+
+VI MODULES AND GENERA
+
+Functions are grouped to "modules". Modules are grouped to
+"genera" which again form a module etc. Things declared in a
+module must be equipped with the availability declaration. The
+availability of a genus is similar to the availability of a
+function viz.:
+
+(1) Functions (for alien user) declared in a genus are available
+to a nam ed neighbors within a module:
+
+USER1,USER2 has genus GENUS_NAME;
+-- modules -
+end GENUS_NAME;
+
+(2) Functions are available to neighbors within a module:
+
+native has genus GENUS_NAME...
+
+(3) Functions are available to that genus which has appended
+this genus into system:
+
+master has genus GENUS_NAME ...
+
+(4) Functions are available to an unknown (possibly named) user,
+outside the module:
+
+alien USER1, USER2 has genus....
+
+The "genera of modules" is analagous to a data processing network; a
+(network) module is genera of (processor) modules which contain
+genera of different programs; a new program is appended to a
+corresponding genus. Only one genus of programs has the right to do
+the appending of the new programs: the operating system, which is the
+"master" among the processor genera.
+
+As a rule:
+
+- The native user is a genus, or a function, within a module.
+
+- The alien user is a genus, or a function, from another module.
+
+From these rules we conclude that a user of a function aimed for
+the network use is a certain genus of programs in an another
+"processor module.
+
+
+VII. ORGANIZATION OF DlSTRIBUTED FUNCTIONS
+
+Our path-declaration is a _generic_tool_, which is visible to a
+number of functions, and such a path could exists also as a multiple
+i.e. as a realization of a load-sharing scheme.
+
+Our "alien"-concept is an unparalleled way to create absolute
+independence between software modules, The "alien"-world handles
+"real names" (as named in the program source text with 11 string of
+letters) of objects, and thus the visibility and the systelm are
+configurable at run-time. The slowness of the "real name"- references
+can be avoided by specialized hardware structures e.g.  by CAM3
+(Contents Addressable memories).
+
+To our distributed network new independent modules can be
+appended at any time. They have a number of alien functions or
+communication paths at their use, or they can erect new ones.
+
+Alien calls are the main cause of network commmunication. An alien
+call is referenced also at runtime by the source name, likewise tile
+user of an alien function must be identified by an unique string of
+letters, usually a module name. The availability of an alien function
+is checked in the originating system by a local version of the "alien
+library" from which object system addresses, parameter types etc. can
+be found.
+
+Contents of the alien library is stored as multiples around in local
+subsystems. Corrections to it are made by broadcasting them to every
+member of the genus. Actual communication is handled by "path
+schedulers"; they maintain the scheduling of the calls; store the
+return addresses etc. One task of the schedulers is to update the
+alien library (fig.1).
+
+When the caller idenfication is a part of a function call, the
+availability rules are established on who is the "master" of the
+activated version of a function. This signifies that not all the
+names, defined in the alien library, need to be unique. The
+organization of the library is tree-structured; a small number of
+"master"-keywords, from the modules appended to the system, are
+visible, and details of the available paths are hidden until a master
+exists.
+
+Because the system is based on names, as expressed by humans, the
+"human-interface" could be integrated as a part of the network
+organization. A keyboard & display is a function, named e.g.
+TERMINAL#6 with KEYBOARD and DISPLAY paths.
+
+Principally our system is based on packets with unique addresses;
+however, to raise the throug'hput of the commmunication network,
+intelligent node processors communicating via standard line
+protocol e.g. HDLC could be implemented.
+
++-----------+
+1 originate I
++-----------+
+I 
+1 
+\/
++----------------+      +---------------+
+: path scheduler : <==> : alien library :
++----------------+      +---------------+
+  I
+  I
+  \/
+  +------+
+ / packet  \
+( switching )
+ \ network /
+  +------+
+  I
+  I
+  \/
++----------------+      +-----------------+
+: path scheduler : <==> : queueing memory :
++----------------+      +-----------------+
+  I
+  I
+  \/
++--------+
+: object :
++--------+
+
+Fig 1. Overall organization of a call
+
+
+
+VIII. EXAMPLES OF DISTRIBUTED FUNCTIONS
+
+As an example of an alien common function we have a BUFFER which
+accepts either master entries to a circular buffer or accepts
+consumption by a named consumer (FiG 2). The master of the BUFFEER
+has also right to KILL it.
+
+
+
+alien waits common function
+BUFFER of (SIZE:integer, CONSUMER:name)
+
+var OUT,COUNTER:integer;
+    POR:portion;
+    BUF:array(O..SIZE) of integer;
+    DONE: boolean;
+
+master starts path KILL;
+master starts path PUT(POR);
+alien CONSUMER wAits (POR) from path GET;
+
+begin
+OUT:=O; COUNTER:=O; DONE:=false;
+continue;
+ repeat
+    if COUNTER < SIZE then try path PUT:
+     BUF((OUT+COUNT)mod SIZE):=POR;
+     COUNTER: =COUNTER+1
+    end path
+ end try;
+ if COUNTER> O then try path GET:
+   POR:=BUF(OUT);
+   continue;
+   COUNTER:=COUNTER-1 ;
+   OUT:=(OUT+1) mod SIZE
+  end path
+ end try;
+ try path KILL: DONE:=true end path end try
+until DONE
+end;
+
+Fig. 2: A BUFFER
+
+
+Function BUFFER is activated e.g. with the following:
+
+try BUFFER(1000,'DEVOURER')
+elsetry WHAT SHALL I DO
+end try - --
+
+Thus existence of the buffer is assured and it can be used by its
+master:
+
+PUT(DATA)
+
+or killed by it:
+
+KILL
+
+Simultaneously the DEVOURER can keep on trying to read data from
+the buffer:
+
+try DATA from GET elsetry SOMETHING_ELSE endtry
+
+Note that the handling of the critical variables (OUT,COUNT) is
+managed without special mutual exclusion mechanisms.
+
+
+Example 2: AT DINNERTABLE
+
+Dijktra's dining philosophers problem is implemented in fig. 3.
+Philosphers sit at a round table trying to eat from a plate of slimy
+apaghetti which requires two forks to eat. The unlucky philosophers
+have only one fork per person, and when a philosopher wants to eat, a
+philosopher to the left must cooperate. However, conversation is
+restricted with the right neighbor only; therefore, messages must be
+sent around the table to get the left hand fork and give it back.
+
+In fig.3 common functions GET, PUT, GOT form a communication ring,
+which stores the requests for a fork. When a philospher (ME)
+requires a fork it sends GET to the ring (for YOU), and receives
+GOT YOURS from the ring when a fork is available. While waiting,
+a command GIVE MINE can arrive, and the philosopher must wait
+until MYFORK is -again available via GOT_MINE.
+
+Alien starts common function DINERS(NUMIBER:integer);
+var READY:boolean; INDEX:integer;
+master starts path DONE;
+
+native starts indexed function PHIL#ME(YOU:integer);
+ var MIYFORK:boolean; WHO:integer;
+ native starts path GOT_YOURS;
+ native starts path GIVE_MINE(WHO);
+ native starts path GOT_MINE;
+ PHIL#YOU starts common function GOT(WHO:integer);
+  begin
+   if WHO=ME then GOT_YOURS else GOT(WHO)
+  end GOT;  
+ PHIL#YOU starts common function PUT(FORK:integer);
+  begin
+   if FORK=ME then GOT_MINE  else PUT(WHO)
+  end PUT;  
+ PHIL#YOU starts common function GET(FORK:integer,WHO:integer);
+  begin
+   if FORK=~ME then GIVE_MINE(WHO) else GRT(FORK,WHO);
+  end GET; 
+
+begin
+ wait READY; -- wait until everybody ready
+ MYFORK:=true; -- I have MYFORK
+ GET(YOU,ME); -- request for another fork
+ loop
+  try path GOT_MINE: -- wait for MYFORK
+   MYFORK:=true 
+   end path
+  until MYFORK end try;
+  try path GOT_YOURS: -- have two forks now, eat
+   PUT(YOU); -- release the fork
+   GET(YOU,ME) -- request it again
+   end path
+  elsetry path GIVE_MINE: -- give MYFORK to WHO
+   GOT(WHO); -
+   MYFORK:=false
+   end path
+  end try;
+ end loop
+end PHIL;
+
+begin READY:=false;
+ PHIL#1(NUMBER); -- "YOU" of the first is the lAst
+ for INDEX:=2 to NUMBER do
+   PHIL#INDEX(INDEX-1); -- else "YOU" is the preceding one
+ READY:=true;
+ try path DONE: end path
+ until false end try -- wAit for DONE
+end DINERS
+
+
+Fig.3: Dining Philosophers
+
+IX. THE ORIGIN OF THE DISTRIBUTED FUNCTIONS
+
+
+Our language bears the nearest resemblance to the the sequential
+language PASCAL, as to the visibility rules of variables or the
+normal "native" functions etc. However, one unmentioned feature
+is the generic variables, important in realization of a function
+of e,g. a compiler which accepts a string of unknown length and
+returns tables and object code of unknown length.
+
+We like to mention the following articles concerning a program
+structure not unlike ours: the" *MOD " by R.P. Cook (2) and
+"Communication Port" by W.T. Mao and R,T. Yeh (8). From Cook we
+adopted the general idea of communication via "ports" and
+"independent message handlers"; and from Mao & Yeh we got the
+idea of premature "disconnection" of ports (or paths),
+
+We have scrutinized many languages aimed for concurrent operation
+and failed to see the benefit of many of the constructs with
+which the complex world of concurrency is to be handled. The
+languages aimed for distributed programming do not have an
+uniform interconnection mechanism between distributed modules,
+and as a result, such programs must have special communication
+statements.
+
+All languages can be critizised of having too "structural" or
+"monolithic" point of view, not really adaptive as an operating
+language of a data processing network, Another drawback of the
+most flexible of the languages is the unnecessary number of
+different programming concepts; e,g. Cook (2) has "module",
+"network", "processor", "process", "procedure", "function",
+"port" and he "defines", "exports", "imports", "awaits" and
+moreover bustles with "semaphores".
+
+The main idea of "Structured Software Signalling Lsnguage - S3L"
+by Hemdal (3) is the "signals" which are transferred
+asynchronously between processes. Signals bear data with them and
+are allowed to get lost if no ob,ject exists. Another main idea
+is the strong typing: all the components can be declared as
+"templates" which allows use of any component in any connection.
+Signals can have direct influence on a program; different signals
+activate different "tasks" in a process lying dormant.
+For example, a S3L-statement:
+
+send PUT with DATA to SOMEBODY
+
+sends a sig'nal (PUT) with associated data to process named as
+SOMEBODY. We describe this kind of signal as:
+
+PUT(DATA)
+
+in which the ob,ject is a "started path" in an existing function
+SOMEBODY.
+
+
+X. CONCLUSION
+----------
+
+The possibility that the system components can be added or
+reduced and the new supplement made available to the rest of the
+system at runtime is the main aim of the new language, called
+"NO.FUN" as an acronym for "Nonstationary Functions".
+
+In the Telecommunication Switching Laboratory already five
+generations of data exchanges have been developed since 1971. The
+fourth and fifth generations are micro- & multimicroprocessor
+controlled intelligent units conforming to different line
+disciplines. The project NO.FUN is a proposition for a local
+packet switching network with intelligent redundant nodes.
+A NO.FUN node responds not only to the hardware requirements of
+the user's system but also has the ability to route and schedule
+the requirements of software. Nodes communicate e.g. via fiber
+optic cable with standard line protocol and offer virtual channel
+mechanism to aoftware functions.
+
+REFERENCES
+----
+
+
+(1) Brinch Hansen, P., "Distributed Processes: A Concurrent
+Programming Concept," CACM 21, 11, pp. 934-941.
+
+(2) Cook, Ropsrt P., " *MOD - A Language for Distributed
+Programming", IEEE 'Trans. Software Eng., VOL SE-8,
+pp. 56.3-570,
+
+(3) Hemdal, G., "Structured Software Signalling Language S3L".
+Report 4/81, Helsinki University of Technology,
+Telecommunication, Switching Laboratory, 1981.
+
+(4) Hirvensalo, J., Myllykangas, A. and Rahko, K., "Quality and
+Standardization o'f Telecommunication Switching System
+Software". SETSS, Warwick, 1981.
+
+(5) Honeywell, Inc and Cii Honeywell Bull, " Reference
+Manual for the ADA programming language", SIGPLAN
+Notices, vol. 14, part A, June 1979.
+
+(6) Jensen, K. and Wirth, N., "Pascal User Manual and Report",
+Springer-Verlag, 1976.
+
+(7) Leppanen, R. and Rahko, K. " Signalling and Control of
+the Facility Integrated Switching System ", Paper proposed
+to Intelexpo 81, Los Angeles, 1981.
+
+(8) MfiO, W. T. and Yeh, R. T., "Communication Port: A language
+Concept for Concurrent Programming", IEEE Trans. Software
+Eng., VOL SE-6, pp. 194-204.
+
+(9) Metcalfe, R. and Boggs, D., " Ethernet: Distributed Packet
+Switching for Local Computer Networks," Commun. Ass.
+Comput. Mach., vol 19, pp. 395-404, July 1976.
+
+(10) Rahko, K., Noko, T. find Leppanen R. "Economized Processing in
+a Mini/Micro System". Report 15/79, Helsinki University of
+Technology, Telecommunication Switching Laboratory, 1979.
+
+
+

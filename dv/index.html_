@@ -1,0 +1,31 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Timo Noko">
+   <meta name="GENERATOR" content="Mozilla/4.6 [en] (Win98; I) [Netscape]">
+   <title>Solar-Powered DV-camera</title>
+</head>
+<body>
+
+<h1>
+SOLAR-POWERED DV-CAMERA</h1>
+
+<p><br>Ok.You have got 3 months trip in the some wet or dusty wilderness
+ahead of you and you want to take your (Sony) DV-camera with you. There
+are some issues, I'mafraid:
+<p>Issue #1: You cannot trickle-charge lithium batteries, like regular
+NiMH-batteries. You have to get a&nbsp; huge10W/12V solar-charger (and
+hope for constant sunshine) and a car battery jack.
+<p>Issue #2: When you try to connect some other form of energy source into
+the power jack of a Sony it somehow recognizes that you are not using authorized
+power source.
+<p>Issue #3:When the camera is kept *unpowered* in a Sony water-proof gasket
+(eg SPK-TRC), it drains the batteries nevertheless.
+<p><img SRC="Img_0013.jpg" height=300 width=400 align=LEFT>
+<p><b><i><font size=+1>And the answer is: -- You have to make a NiMH-battery-pack
+of your own, regulate the voltage to 8.2 Volts and construct a power-switch.</font></i></b>
+<br><b><i><font size=+1></font></i></b>&nbsp;
+<br>&nbsp;
+</body>
+</html>

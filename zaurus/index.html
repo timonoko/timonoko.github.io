@@ -1,0 +1,136 @@
+<html>
+<title>
+Zaurus SL C1000 and Huawei E220 HSDPA USB Modem
+</title>
+<H1> Zaurus SL C1000 and Huawei E220 HSDPA USB Modem </h1>
+<img src=http://koti.welho.com/tnoko/jemma/HuaweiModem.JPG width=500 >
+<p>
+It works. Except you need more power. I have a camera battery (4 volts) directly connected to the
+5 volt USB-line. Does not consume much, but there are 300mA power burst that Zaurus cannot produce.
+<p>
+<h3>FILES:</h3>
+<p>
+Modem is both usbstorage and three serial ports. However standard
+Sharp-rom recognizes only the storage. This script removes the useless
+usbstorage and forces the serial ports on. It requests that you unplug
+the modem and tries again if the operation fails. Steady blue light on
+the modem tells you there is a connection.
+<p>
+/usr/local/bin/3G :
+<pre>
+sudo killall .pppd
+sudo rmmod usb-storage
+sudo modprobe usbserial vendor=0x12d1 product=0x1003
+sleep 5
+if  dmesg | tail  | grep "attached to ttyUSB2" ; 
+  then 
+   echo OK
+   sudo /usr/sbin/pppd call h3g
+  else 
+     echo
+     echo ----- Replug the Modem, wait for blinking BLUE light -----
+     read
+     . 3G
+fi
+</pre>
+<p>
+<p>
+This seems to be the easiest way to kill the connection:
+<p>
+/usr/local/bin/3G-kill :
+<pre>
+sudo killall .pppd
+</pre>
+
+<p>
+These files may vary. These are for "Elisa" in Finland.
+<p>
+/etc/ppp/h3g.chat :
+<pre>
+ECHO ON
+ABORT BUSY
+ABORT ERROR
+REPORT CONNECT
+TIMEOUT 30
+"" "AT+COPS?"
+"OK" ATZ
+OK 'AT+CGDCONT=1,"IP","internet","0.0.0.0",0,0'
+OK "ATDT*99#"
+CONNECT \d\c
+</pre>
+/etc/ppp/peers/h3g :
+<pre>
+ connect "/usr/sbin/chat -v -f /etc/ppp/h3g.chat"
+ /dev/ttyUSB0
+ 460800
+ noauth
+ debug
+ novj
+ defaultroute
+ noipdefault
+ user "rlnet"
+ password "XXXXXX"
+ crtscts
+ nodeflate
+ nobsdcomp
+</pre>
+<p>
+<p>
+<p>
+This is a fool-proof opie-shell version of 3G. It does everything,
+also disconnection. 
+<p>
+/home/QtPalmtop/bin/3G-sh :
+<p>
+<pre>
+if ps -A | grep pppd ;
+   then 
+    opie-sh -m -M "Kill the Connection?" -1 "NO" -g
+    if  [ $? -ne 1 ]  ; then sudo killall .pppd ; fi
+else
+if lsusb | grep 1003 ;
+  then
+    sudo rmmod usb-storage
+    sudo modprobe usbserial vendor=0x12d1 product=0x1003
+    sleep 5
+    if  dmesg | tail  | grep "attached to ttyUSB2" ; 
+    then 
+        sudo /usr/sbin/pppd call h3g
+        sleep 5
+        sudo cat /etc/ppp/connect-errors | tail -12 | opie-sh -f -g -t "Connecting to ..." -m
+    else 
+        opie-sh -m -M "Replug the Modem! Wait fot blinking blue light." -g
+        . 3G-sh
+    fi
+  else
+    opie-sh -m -M "Modem not Plugged." -g
+ fi
+fi
+</pre>
+
+<p>
+This is my /usr/local/bin/sudo :
+<pre>
+ su root -c "$*"
+</pre> 
+<p>
+<p>
+<p>
+<p>
+---------------------------- By <b>Timo Noko</b>, <i> timonoko@gmail.com</i> 
+
+<p>
+<i><h2>Addendum</h2></i>
+<p>
+
+Some of my Zaurus-periphalia for the backcountry:
+<p>
+<li> 4 piece NiMh-batteryback - I solar
+charge these and connect them directly to the +5V power socket. </li>
+<li> Navibe USB-GPS, you need "usbserial-slc3200_2.4.20-1_arm.ipk".
+(Updated and Zaurus-scaled script for QPEGPS-maps-from-Google is
+<a href=http://koti.welho.com/tnoko/jemma/qpegpsmaps_small.html> here. </a>) </li>
+<li> Huawei modem and adapter for Pentax W20 camera battery </li> 
+<p>
+<img src=http://koti.welho.com/tnoko/jemma/ZaurusPeriphalia.JPG>
+

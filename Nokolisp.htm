@@ -1,0 +1,60 @@
+<title>Nokolisp</title>
+
+
+<body bgcolor="#579583" text="#000000" link="#990000"
+vlink="#990000" alink="#990000">
+
+
+<center>
+<img src=jemma/me1975.jpg width=500 border=5>
+</center>
+
+</div>	  <h1 class="firstHeading">((((( Nokolisp )))))</h1>
+	  <div id="bodyContent">
+
+
+<b>Nokolisp</b> is a variant of the <a href="http://en.wikipedia.org/wiki/Lisp" title="Lisp">Lisp</a> language created around 1976 by <a href="Timo_Noko.htm">Timo Noko</a>. The first implementation was made, with very
+little knowledge or experience, in the <a href=http://en.wikipedia.org/wiki/Data_General_Nova> Nova-1200</a>-like computer which had 16 kilowords of <a href="http://en.wikipedia.org/wiki/Core" title="Core">core</a>
+memory and a <a href="http://en.wikipedia.org/wiki/Paper_tape" title="Paper tape">paper tape</a> punch for mass storage. The most recent implementation
+was created in 2000 for the Nokia 9110 cell phone.
+A version for <a href="http://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> is reported to be implemented "<i>any day now</i>".</p>
+In 1984 Noko was hired by goverment-own company called Nokia. Nokolisp was used to create various programming tools like <a href=TNCODE.htm>TNCODE</a>, TNANAL and TNSDL.
+<p>
+When Noko lost his job in Nokia Corporation in 1990, Nokia renamed Nokolisp to "Nykylisp" and totally owned it, and now somebody else claims to be the sole author.
+<p>
+Working Nokolisp Intepreter/Compiler for Msdos is 
+<a e href=noko.exe>here</a>.
+
+<p>
+Nokolisp demonstration in <a href=http://www.youtube.com/watch?v=HB6HvhOw_MY>Youtube</a>. (<font color=yellow>*NEW*</font>) 
+
+<p>
+<p>Noko had no knowledge of <a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a> at the time, but he had
+rudimentary comprehension of <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>-like pattern matching and thus the language was
+formally described as follows:</p>
+<pre>
+(defun car ((x . y)) x)
+(defun cdr ((x . y)) y)
+(defun list x x)
+(defun cons (x y) (list x . y))
+</pre>
+
+<h1> Addendum: Early History (<font color=yellow>*NEW*</font>)  </h1>
+
+Noko had constructed a Forth-like interpreter inspired by Byte-magazine. Then he realized than if he defined the symbol "(" to throw next symbol on to separate stack and ")" symbol to execute it, he would have much nicer code.
+<p>
+He got access to time-shared Interlisp with TTY line editor. He now understood the S-expression. He made his own editor, but screen-based, cause he had a CRT-terminal.
+<p>
+He realized that Nova had CAR/CDR built in. The highest bit in 16bit word causes memory controller itself to make new access in 15-bit address space.
+<p>
+Everything was a mess, until 1979 Byte-Magazine came about. Then he understood everything and implemented garbage-collector and eval. G&ouml;del-Escher-Bach came out 1979 too, insanity was totally the new black! 
+<p>
+First compiler was in CP/M-version in 1980. CP/M-version had external dynamic RAM-memory which was 35 bits wide and 64 kilowords long. Hence one address contained one Lisp-node, with 3 bits for node-type. This device was known as <a href=jemma/smuisti.html>S-memory</a>. Some of this stuff was actually documented & published.<i> (Noko T. NokoLisp ja Osborne. Tietokone, No. 2-3, 1983)</i>
+<p>
+Msdos-compiler was better, subrus had two addresses, because compiled parameters were now in cpu stack.
+<p>
+TN-tools in Nokia were automatically compiled into C-code to be run in VAX-computers. Compiled C-code did not have garbage collector, there was separate reclaim-command for discarding used data. If you managed to run your program without ever hearing the BEEP caused by garbage collector, your program was ready for VAXing.
+<p>
+<center>
+<img src=jemma/byte-lisp-issue-cover.jpg width=1000>
+</center>

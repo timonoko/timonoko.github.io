@@ -1,0 +1,1 @@
+dvbstream -f 274000 -s 6900 -qam 128 -analyse -v 512 -a 650 17

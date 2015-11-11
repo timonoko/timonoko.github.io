@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps + Streetview</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript">
+
+var geocoder
+var map 
+
+   function initialize() {
+      geocoder = new google.maps.Geocoder();
+      var coordinate = new google.maps.LatLng(60.169812,24.93824);
+      
+    var myOptions = {
+      zoom: 10,
+      center: coordinate,
+      mapTypeId: google.maps.MapTypeId.ROADMAP, streetViewControl: true
+    }
+
+
+
+
+
+      map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+      var panoramaOptions = {
+        position: coordinate,
+        pov: {
+          heading: 170,
+          pitch: 10,
+          zoom: 1
+        }
+      };
+      var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaOptions);
+      map.setStreetView(panorama);
+    }
+
+
+
+
+  function codeAddress() {
+    var address = document.getElementById("address").value;
+    if (geocoder) {
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          map.setCenter(results[0].geometry.location);
+          var marker = new google.maps.Marker({
+              map: map, 
+              position: results[0].geometry.location
+          });
+        } else {
+          alert("Geocode was not successful for the following reason: " + status);
+        }
+      });
+    }
+  }
+
+
+
+
+
+
+    </script>
+  </head>
+  <body bgcolor="#000000" onload="initialize()">
+<div id="pano" style="width: 400px; height: 430px;"></div>    
+<div id="map_canvas" style="position:absolute; left:403px; top: 8px; width: 400px; height: 430px"></div><p>
+    <div>
+    <input id="address" type="textbox" value="Helsinki, Finland">
+    <input type="button" value="Find" onclick="codeAddress()">
+
+  </div>
+  </body>
+</html>
+
+http://maps.google.fi/maps?hl=en&ie=UTF8&hq=&hnear=Helsinki&ll=&spn=0.000615,0.001725&z=19&layer=c&cbll=60.169841,24.938313&panoid=ANdrFuvR85fXmXEeSypuTQ&cbp=12,231.39,,0,5

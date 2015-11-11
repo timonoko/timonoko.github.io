@@ -1,0 +1,18 @@
+
+<title>Kansalaisen Karttapaikka ja S60-puhelin</title>
+<h1> Kansalaisen Karttapaikka ja S60-puhelin</h1>
+<body bgcolor="#5bd4b9" text="#000000" link="#990000"
+vlink="#990000" alink="#990000">
+
+<p>
+T&auml;ss&auml; ei ole mit&auml;&auml;n hienoa. Se lukee GPS:st&auml; sijaintipaikan ja
+avaa senj&auml;lkeen Kansalaisen Karttapaikan selaimessa kyseisess&auml; paikassa. <p>
+Se siit&auml;. S&auml;hk&ouml;&auml; s&auml;&auml;styy. Sopii parhaiten satunnaiselle eksyj&auml;lle.
+<a href=kk_v1_0_0.sis>SIS-tiedosto</a>. <a href=kk.py>Pythonkoodi</a>.
+ <p>
+Toimii heitt&auml;m&auml;ll&auml; vain tietyiss&auml; vuoden 2009 puhelimissa, Kuten 6730c ja
+E52. Muissa puhelimissa vingutaan Python Runtimea ja muuta paskaa. <a href="http://www.matkapuhelinfoorumi.fi/f44/asennus-ei-onnistu-e71-t-nokon-karttapaikka-ohjelma-64394/">Lis&auml;tietoja</a>.
+<p>
+Paljon hienompi on esimerkiksi <a href=http://code.google.com/p/aulost/>AULOST</a>-niminen python-ohjelma. Se seuraa kokoajan GPS:&auml;&auml; ja hakee tarpeen mukaan uusia sivuja karttapaikasta. Tosin n&auml;pp&auml;imist&ouml;&auml; voisi <a href=aulost_nappis.html>parannella</a>.
+
+
