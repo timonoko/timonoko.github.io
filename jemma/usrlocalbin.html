@@ -1,0 +1,483 @@
+<htnl>
+<title>Roinaa</title>
+<h1>From my /usr/local/bin:</h1
+<p>
+#! /bin/bash implied
+<p>
+<h3>Arduino-setup: solves USB-port problem</h3>
+<pre>
+eka=$(dmesg | tac | grep "FTDI USB Serial Device converter now attached to")
+toka=${eka#*"attached to "}
+kola=$(expr substr "$toka" 1 7)
+echo $kola
+if grep $kola ~/.arduino/preferences.txt ; then
+  echo OK
+else
+ sed -e "s/ttyUSB./$kola/" < ~/.arduino/preferences.txt >  ~/.arduino/uus.txt 
+ rm  ~/.arduino/old.txt 
+ mv  ~/.arduino/preferences.txt  ~/.arduino/old.txt 
+ mv  ~/.arduino/uus.txt ~/.arduino/preferences.txt  
+ diff ~/.arduino/old.txt ~/.arduino/preferences.txt  
+fi
+</pre>
+<p><p>
+<h3>Aurinko: Sun and Moon from CelestialComputer.jar</h3>
+<pre>
+#!/usr/bin/python
+
+import math,os,re
+
+def dr(x):
+    y=x.replace("'"," ").replace("\xc2"," ").replace("\xb0"," ").split(" ")
+    z=float(y[0])+float(y[2])/60
+    return z
+    
+def Hc(lat,dec,LHA):
+    return math.degrees(math.asin(math.sin(lat)*math.sin(dec)\
+           + math.cos(lat)*math.cos(dec)*math.cos(LHA)))                 
+
+lines=os.popen("java -classpath /usr/local/bin/CelestialComputer.jar main.Main").readlines()
+
+for line in lines:
+    if re.search("GHA Sun",line):
+        GHA=eval(line.split(" ")[6])
+    if re.search("DEC Sun",line):
+        DEC=eval(line.split(" ")[7])
+    if re.search("SD Sun",line):
+        SD=eval(line.replace("'"," ").split(" ")[6])/60.       
+
+for line in lines:
+    if re.search("GHAmoon",line):
+        GHAmoon=dr(line.split(" ")[4])
+    if re.search("DECmoon",line):
+        DECmoon=dr(line.split(" ")[5])
+    if re.search("SDmoon",line):
+        SDmoon=eval(line.replace("'"," ").split(" ")[5])/60.       
+
+def Hc(lat,dec,LHA):
+    return math.degrees(math.asin(math.sin(lat)*math.sin(dec)\
+           + math.cos(lat)*math.cos(dec)*math.cos(LHA)))                 
+
+LAT=60.18
+LON=24.93
+
+print "LAT=%5.4f, LON=%5.4f"%(LAT,LON)
+print
+
+LHA=GHA-(360-LON)
+
+print "Sun: Hc=%5.4f, LHA=%5.4f, SD=%5.4f"\
+      %(Hc(math.radians(LAT),math.radians(DEC),math.radians(LHA)),360+LHA,SD)
+
+LHAmoon=GHAmoon-(360-LON)
+
+print "Moon: Hc=%5.4f, LHA=%5.4f, SD=%5.4f"\
+      %(Hc(math.radians(LAT),math.radians(DECmoon),math.radians(LHAmoon)),360+LHAmoon,SDmoon)
+</pre>
+<p><p>
+<h3>avi2gif: from AVI-file to GIF-animation</h3>
+<pre>
+rm -f image-*.jpg
+ffmpeg -i $1 -f image2 -r 5  image-%03d.jpg
+convert image-*.jpg  animation.gif
+</pre>
+<p><p>
+<h3>avi2jpg: Third frame from AVI-file.</h3>
+<pre>
+ffmpeg -i $1 -f image2 -r 5 image-%03d.jpg
+</pre>
+<p><p>
+<h3>calc: Bash calculator</h3>
+<pre>
+#!/bin/bash
+# The "scale=4" allows for division to be carried out to 4 decimal places. 
+# You can edit this to whatever length you wish to carry the division to.
+# I suggest putting an alias into your .bashrc file
+# Example: alias calc='sh /home/$USER/scripts/bashcalc.sh'
+# This allows for your bashcalc.sh script to operate from the shell 
+# Example: 
+#   crouse@linux:~> calc 3.555+7.999
+#   11.554
+#   crouse@linux:~>
+# Alternatively, you could also make this work system wide if you have
+# root access, you could put the script into /usr/bin/calc. Whichever method
+# you choose to use, don't forget to "chmod a+x" the script to make it executable.
+echo "scale=4; $1" | bc ;exit
+</pre>
+<p><p>
+<h3>cp-Ruv-noko: Copy a directory good</h3>
+<pre>
+# Kopioi PWD-hakemiston kaikki kamat Arg-hakemiston
+for x in $( ls ) ; do
+  if [ -d $x ] ; then 
+       uusdir="$1/$x"
+       apua=$( echo "$uusdir" | grep "//" )
+       if [ ! "$apua" = "" ]  ; then
+               echo $apua
+	       echo "EI LOPPU-SLASHIA, IDIOOTTI"
+	       exit
+       fi
+       if [ -a $uusdir ] ; then true ;
+       else mkdir $uusdir;
+            echo ; echo "MAKE === " $uusdir; sleep 2
+            echo
+       fi
+       pushd $x ;
+       cp-Ruv-noko $uusdir ;
+       popd ;  
+  elif [ -f $1/$x ] ; then true ;
+  else  echo "cp $x $1" ;
+       cp $x $1 
+  fi
+done
+</pre>
+<p><p>
+<h3>del-kaikki: Delete all filetypes in branches</h3>
+<pre>
+find . -name "*.$1" | while read fn; do
+   echo Deleting "$fn"  
+   rm "$fn"  
+ done
+</pre>
+<p><p>
+<h3>display-jpg-X-Y: Display a picture in backdrop at X Y</h3>
+<pre>
+display +backdrop -resize 320x240 -geometry 320x240+$2+$3 $1
+</pre>
+<p><p>
+<h3>e: emacs no shit</h3>
+<pre>
+emacs -nw "$@"
+</pre>
+<p><p>
+<h3>exif_kaikki_jpg: Rename all files with exif-date</h3>
+<pre>
+for x  in *.JPG ; do
+  name=$(exiftool -ModifyDate -s3 -d "%Y%m%d_%H%M%S" $x)
+  mv $x "$name".jpg
+  echo  mv $x "$name".jpg
+done
+for x  in *.jpg ; do
+  if [[ $x == 2013* ]] ; then echo skippi
+  else
+   name=$(exiftool -ModifyDate -s3 -d "%Y%m%d_%H%M%S" $x)
+   mv $x "$name".jpg
+   echo  mv $x "$name".jpg
+  fi
+done
+for x  in *.MP4 ; do
+  name=$(exiftool -ModifyDate -s3 -d "%Y%m%d_%H%M%S" $x)
+  mv $x "$name".mp4
+  echo  mv $x "$name".mp4
+done
+#sanity.pl *
+</pre>
+<p><p>
+<h3>fix-epub: fixes some problem with quote-chars</h3>
+<pre>
+mkdir zempo
+pushd zempo
+unzip ../"$1"
+echo lainausmerkit kuntoon
+grep -c  "\’" *.html
+for x in *.html ; do
+ sed "s/\`/\'/" $x > huis.html
+ sed "s/\’/\'/" huis.html > $x
+ rm huis.html
+done
+zip -r ../uus.epub *
+popd
+rm -R zempo
+</pre>
+<p><p>
+<h3>gittaus2: push file to git</h3>
+<pre>
+git commit $1 -m "Korjaus"
+git push
+</pre>
+<p><p>
+<h3>icon-make-noko: LXDE icon</h3>
+<pre>
+file=~/.local/share/applications/$1-noko.desktop
+echo [Desktop Entry] > $file
+echo Name=$1 >> $file
+echo Comment=noko-made >> $file
+echo Exec=$1 >> $file
+echo Terminal=false >> $file
+echo Icon=~/.local/share/icons/nokoicon.png >> $file
+echo Type=Application >> $file
+</pre>
+<p><p>
+<h3>inframelu: Keep wireless headhones on with 15kHz</h3>
+<pre>
+while true ; do
+play -n -c1 synth 0:0:2  sin  15000  gain -30
+sleep 200
+done
+</pre>
+<p><p>
+<h3>jpg2avi:</h3>
+<pre>
+rm tulos.avi
+mencoder "mf://*.JPG" -mf fps=10:w=1280:h=960 -o tulos.avi -ovc lavc -lavcopts vcodec=mjpeg 
+mplayer tulos.avi
+</pre>
+<p><p>
+<h3>kaikki-kanavat: shows all TV-channels</h3>
+<pre>
+while [ 0 ] ; do
+for x in "Liv" "TV5" "DINA" "Jim" "Sub" "MTV3" "Nelonen" 10 11 16 "FOX" "AVA" "Kutonen" 26 28 29 ; do
+ echo kanava $x
+ qdbus org.kde.kaffeine /Television PlayChannel $x
+ sleep 8
+done
+done
+</pre>
+<p><p>
+<h3>Kopioi-Vain-Epub:</h3>
+<pre>
+rm -R $HOME/puppeli
+mkdir $HOME/puppeli
+find . -regex ".*[(\.epub)|(\.EPUB)]" | while read fn; do
+     echo cp $fn $HOME/puppeli
+     cp "$fn" $HOME/puppeli
+done
+</pre>
+<p><p>
+<h3>linkkaakaikkiKuvatJaVideot: Time-sort all files to one dir  for movie-making</h3>
+<pre>
+rm -R /home/tnoko/kakki
+mkdir /home/tnoko/kakki
+
+numero=10000
+
+find . -regex ".*[(\.JPG)|(\.MP4)|(\.jpg)|(\.mp4)|(\.mov)|(\.avi)]" | while read fn; do
+ if [ -d "$fn" ] ; then echo Vitut "$fn"
+ else
+#  echo "$fn"
+  aa=$(echo "$fn" | tr " " "_")
+  eka=$(basename "$aa")
+  p=$(pwd)
+  zaka="$p/${fn:2}"
+ echo ln -s "$zaka" /home/tnoko/kakki/"$numero"_"$eka"
+ ln -s "$zaka" /home/tnoko/kakki/"$numero"_"$eka"
+# ln -s "$fn" /home/tnoko/kakki/"$numero"_"$eka"
+# ln -s $p/${fn:1} /home/tnoko/kakki/$eka
+  numero=$((numero+1))
+#  sleep 1
+ fi
+done
+
+cd /home/tnoko/kakki
+for x in * ; do
+#  iik=$(stat -L -c %Y $x)
+#  aak=${x: -4}
+#   echo $x $iik$aak
+#  mv $x $iik$aak
+  iik=$(exiftool $x | grep "Create Date")
+  aak=${iik: -20}
+  aak2=${aak//:/}
+  aak3=${aak2//\ /}
+  echo $x $aak3$typ
+  typ=${x: -4}
+  if [ "$aak3"  == "" ] 
+     then echo PASKA
+     else mv $x $aak3$typ 
+   fi
+done
+
+#sanity.pl -l *
+</pre>
+<p><p>
+<h3>mencoder-for-Youtube:</h3>
+<pre>
+ffmpeg -i "$1" -c:v libx264 -f avi -crf 27  "$1.avi"
+#ffmpeg -i "$1" -i "$2" -c:v libx264 -c:a copy -f avi -crf 27  "$1.avi"
+</pre>
+<p><p>
+<h3>autoskrollaus:</h3>
+<pre>
+#!/usr/bin/python
+
+import virtkey
+import time
+
+# This Example Presses the spacebar once every second for a minute
+
+KeyEmulator=virtkey.virtkey()
+v=virtkey.virtkey()
+
+def press(keyname):
+        # 'press_unicode()' emulates the key being pressed down
+        # ord() converts the character to it's unicode value
+	KeyEmulator.press_unicode(ord(keyname))
+
+        # The key stays pressed down until you tell virtkey to release
+        # it with the 'release_unicode()' function. note: you have to specify
+        # which key to release with the unicode value again
+	KeyEmulator.release_unicode(ord(keyname))
+
+	
+for i in range(60):
+	# Presses the key
+	v.press_keycode(116)
+	v.release_keycode(116)
+	      # Wait 1 second
+	time.sleep(1)
+
+</pre>
+<p><p>
+<h3>normalize-like-Hunt: Maximize all RGB-channels says Hunt</h3>
+<pre>
+convert $1 -channel red -normalize -channel green -normalize -channel blue -normalize norm-$1
+mv $1 vanha-$1
+mv norm-$1 $1
+</pre>
+<p><p>
+<h3>startrek: Enterprise sound</h3>
+<pre>
+play -c2 -n synth whitenoise band -n 50 24 band -n 300 100 gain +18 
+</pre>
+<p><p>
+<h3>tilee: Split picture into pieces for large prints</h3>
+<pre>
+wid=$(identify -format "%w" $1)
+hei=$(identify -format "%h" $1)
+newwid=$[$wid/$2]
+newhei=$[$newwid*100/133]
+echo $wid $hei $newwid $newhei
+convert $1 -crop "$newwid"x"$newhei" +repage -scale 1330x1000 -extent 1330x1000 \
+ -bordercolor "#808080" -border 6x5  zzile%d.bmp
+#for x in zzile* ; do convert $x  -rotate 90 $x.ps ; done
+</pre>
+<p><p>
+<h3>VolumeDouble:</h3>
+<pre>
+pactl -- set-sink-volume 0 200%
+</pre>
+<p><p>
+<h3>radio:</h3>
+<pre>
+#!/usr/bin/python
+
+import os, time
+from Tkinter import *
+
+Antenni= {
+"Bassoradio": 102800000,
+"Iskelma": 96200000,
+"Jarviradio": 105500000,
+"Radio Aalto": 92500000,
+"Radio Dei": 89000000,
+"Radio Helsinki": 88600000,
+"Radio KLF": 100000000,
+"Radio Nova": 106200000,
+"Radio Rock": 94900000,
+"Radio SuomiPOP": 98100000,
+"The Voice": 104600000,
+"YLE Radio 1": 87900000,
+"YLE Radio Extrem (X3M)": 98900000,
+"YLE Radio Peili": 103700000,
+"YLE Radio Suomi": 94000000,
+"YLE Radio Vega": 101100000,
+"YleX": 91900000 }
+
+
+Welho = {
+"Groove FM":       105500000,
+"Iskelma":                89400000,
+"NRJ":                93200000,
+"Radio Aalto":        98000000,
+"Radio City":       103000000,
+"Radio Dei":       101900000,
+"Radio Helsinki":       104000000,
+"Radio Rock":        99700000,
+"Radio Sputnik":        98700000,
+"Radio Suomipop":       103500000,
+"Rondo FM":       106700000,
+"The Voice":       101500000,
+"YLE Mondo":       107300000,
+"YLE Puhe":       102300000,
+"YLE Radio 1":        92300000,
+"YLE Radio Suomi":        88400000,
+"YLE Radio Vega":        89900000,
+"YLE Radio X3M":        97000000,
+"YLEX":                95600000 }
+
+record = False
+Lahde = Welho
+Taajuus = "YLE Mondo"
+
+def kana2():
+   os.system("killall rtl_fm")
+   time.sleep(1)
+   iik=str(Taajuus).replace(" ","")
+   if record:
+      reco=" tee $HOME/" + iik + ".raw |"
+      reco2=" : Record"
+   else:
+      reco = ""
+      reco2= ""
+   systemstr= "rtl_fm -f " + str(Lahde[Taajuus]) + \
+    " -W  -o 1 -s 200k -r 64k  -A fast |"\
+    + reco + \
+    " aplay -r 32k -f S16_LE -t raw -c 2 &"
+   print systemstr
+   os.system(systemstr)
+   text.insert(END, str(Taajuus)+": "+str(Lahde[Taajuus]/1000000.)+reco2+"\n")
+   text.pack()
+
+def wkanava(x):
+   global Lahde
+   global Taajuus
+   Lahde = Welho
+   Taajuus = x
+   kana2()
+
+def akanava(x):
+   global Lahde
+   global Taajuus
+   Lahde = Antenni
+   Taajuus = x
+   kana2()
+
+def dorec():
+   global record
+   record = not record
+   if record:  text.insert(END,"Record ON\n")
+   else: text.insert(END,"Record OFF\n")
+   text.pack()
+   kana2()
+
+def loppu():
+   os.system("killall rtl_fm")
+   root.quit()
+
+def gqrx():
+   os.system("killall rtl_fm")
+   os.system("gqrx")
+   root.quit()
+
+root = Tk()
+root.title("RTL-SDR")
+text = Text(root,width=50,height=20)
+menu = Menu(root)
+
+welhomenu = Menu(menu)
+menu.add_cascade(label="Welho", menu=welhomenu)
+for x in Welho:
+    welhomenu.add("command", label=x, command=lambda y=x: wkanava(y))
+
+antennimenu = Menu(menu)
+menu.add_cascade(label="Antenni", menu=antennimenu)
+for x in Antenni:
+    antennimenu.add("command", label=x, command=lambda y=x: akanava(y))
+
+menu.add_command(label="Record", command=dorec)
+menu.add_command(label="Gqrx", command=gqrx)
+menu.add_command(label="Exit", command=loppu)
+
+root.config(menu=menu)
+mainloop()
+</pre>
+</html>
