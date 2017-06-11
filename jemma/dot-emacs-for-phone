@@ -1,0 +1,51 @@
+(menu-bar-mode t)
+
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-echo-area-message t)
+
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+(setq-default ispell-program-name "/usr/bin/tmispell")
+
+(setq ispell-local-dictionary-alist
+        '(("suomi"
+           "[%.0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[^.%0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[':]" nil nil nil utf-8)))
+
+(setq ispell-dictionary "suomi")
+
+(put 'upcase-region 'disabled nil)
+
+(setq justify 1)
+(setq-default fill-column 52)
+
+(global-set-key (kbd "[B") 'next-line)
+(global-set-key (kbd "[A") 'previous-line)
+(global-set-key (kbd "[C") 'forward-char)
+(global-set-key (kbd "[D") 'backward-char)
+
+(global-set-key (kbd "↓") 'next-line)
+(global-set-key (kbd "↑") 'previous-line)
+(global-set-key (kbd "→") 'forward-char)
+(global-set-key (kbd "←") 'backward-char)
+
+(global-set-key (kbd "▶") 'forward-word)
+(global-set-key (kbd "◀") 'backward-word)
+(global-set-key (kbd "▼") 'scroll-up)
+(global-set-key (kbd "▲") 'scroll-down)
+
+(global-set-key (kbd "□") 'toggle-truncate-lines)
+(global-set-key (kbd "★") 'redraw-display)
+(global-set-key (kbd "C-l") 'redraw-display)
+(global-set-key (kbd "♥") 'hippie-expand)
+(global-set-key (kbd "♣") 'hippie-expand)
+(global-set-key (kbd "♡") 'execute-extended-command)
+(global-set-key (kbd "♧") 'execute-extended-command)
+
+(setq redisplay-dont-pause t)
+
